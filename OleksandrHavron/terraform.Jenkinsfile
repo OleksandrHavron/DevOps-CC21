@@ -6,11 +6,7 @@ pipeline {
     stages {
         stage('Terraform init/plan'){
             steps{
-                sh 'pwd'
-                sh 'ls -la'
-                dir('./tf_files') {
-                    sh 'pwd'
-                    sh 'ls -la'
+                dir('./OleksandrHavron/tf_files') {
                     sh 'terraform init'
                     sh 'terraform plan'
                 }
