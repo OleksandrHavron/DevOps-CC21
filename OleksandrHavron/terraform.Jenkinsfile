@@ -9,6 +9,7 @@ pipeline {
                 sh 'pwd'
                 dir('./tf_files') {
                     sh 'pwd'
+                    sh 'ls'
                     sh 'terraform init'
                     sh 'terraform plan'
                 }
